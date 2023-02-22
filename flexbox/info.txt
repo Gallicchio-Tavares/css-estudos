@@ -1,0 +1,56 @@
+FLEXBOX
+
+display: flex; -> mudando o display para flex vai criar os dois eixos imaginários no qual vc pode trabalhar:
+o eixo principal e o eixo auxiliar (eixo x e eixo y por definição, respectivamente). O display flex não vai
+mais deixar os conteúdos um em cima do outro, ele vai deixá-los alinhados no eixo principal (horizontal)
+
+flex-direction: (); -> vai te permitir mudar a direção dos conteúdos. Por padrão a flex-direction é row 
+(direção horizontal).
+column -> vertical
+column-reverse -> inverte a ordem no eixo vertical
+row-reverse -> inverte a ordem no eixo horizontal
+
+justify-content: (); -> é a propriedade que controla o conteúdo ao longo do eixo principal. O padrão é
+flex-start, que mantém os conteúdos colados na esquerda da div.
+flex-end -> o conteúdo vai pro final do eixo principal
+center -> centralizar os itens no meio do eixo
+space-between -> distribuir os itens com espaçamentos iguais, de forma que preencham todo o eixo
+space-around -> similar ao anterior, mas os cantos também possuem algum espaçamento entre eles
+space-evenly -> vai distribuir com espaços iguais
+
+align-items (); -> controla o conteúdo no eixo auxiliar. flex-start é o padrão, que mantém os conteúdos
+no topo da div.
+flex-end -> o conteúdo vai pro final do eixo auxiliar
+center -> centralizar os itens no meio do eixo
+baseline -> vai alinhar os itens de forma que a base do texto de cada elemento fique alinhada
+
+flex-wrap: (); 
+no-wrap -> o padrão, faz com que todos os itens fiquem na mesma linha
+wrap -> mantém o tamanho dos itens, dividindo eles na div para que caibam quando não há mais espaço
+
+align-content: (); -> propriedade desbloqueada com o flex-wrap: wrap; permite alinhar o conteúdo no eixo
+vertical.
+flex-end -> o conteúdo vai na base do eixo auxiliar
+flex-start -> o conteúdo vai no topo do eixo auxiliar
+center -> centralizar os itens no meio do eixo
+space-between -> distribuir os itens com espaçamentos iguais, de forma que preencham todo o eixo
+space-around -> similar ao anterior, mas os cantos também possuem algum espaçamento entre eles
+space-evenly -> vai distribuir com espaços iguais
+
+gap: (); -> adicionar espaços entre os containers
+
+flex-grow: (); -> permite que um item cresça se há espaço suficiente para isso   
+
+flex-shrink (); -> quando a tela diminuir de tamanho,vc pode dar um valor pra definir que um item
+encolha numa velocidade menor. se o valor for 0, ele não encolhe.
+
+flex-basis: (); -> pode definir o tamanho de um item. se o valor for 0, ele diminui até o seu máximo
+
+flex: (); -> é um atalho para as 3 propriedades acima simultaneamente, mas as o 2° e o 3° parâmetro
+são opcionais, eles vão ser determinados automaticamente pra vc.
+
+align-self: (); -> vai sobrescrever o align-items estabelecido no container e mudar o item em questão 
+sozinho
+
+order: (); -> podemos mudar a ordem com a qual os itens em uma div aparecem.
+-1 vai fazer o item ir pro início, 1 vai pro final

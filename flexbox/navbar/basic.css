@@ -1,0 +1,36 @@
+:root {
+    --clr-base: #ffeead;
+    --clr-blue: #96ceb4;
+    --clr-red: #ff6f69;
+    --clr-green: #88d8b0;
+  }
+
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-size: cover;
+}
+
+.container > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: var(--clr-base);
+}
+  
+html, body {
+    background-color: var(--clr-base);
+    margin: 10px;
+}
+
+.home{
+    background-color: var(--clr-blue);
+}
+
+.search{
+    background-color: var(--clr-red);
+}
+
+.log{
+    background-color: var(--clr-green);
+}

@@ -1,0 +1,39 @@
+existem ao todo 5 tipos de posições que podemos ter no css:
+- absolute
+- fixed
+- relative
+- sticky
+- static
+
+1 - absolute:
+um elemento que recebe a posição absolute é removido do documento. Nenhum espaço é criado para ele e demais 
+elementos no documento vão se comportar como se ele nem existisse.
+Com a posição do elemento definido como absolute, vc pode definir a posição dele com mais liberdade (usando as
+propriedades right, left, top e bottom) sem que isso interfira na posição dos outros elementos
+
+2 - static:
+um elemento com essa propriedade n tem acesso ao right, left, top e bottom nem ao z-index
+
+3 -  relative:
+diferentemente do static, aqui vc pode manipular as propriedades right, left, top, bottom e z-index. 
+Também, diferentemente do absolute, o relative deixa os elementos com essa propriedade no fluxo normal do documento.
+
+4 - fixed: 
+como o absolute, tb remove o elemento do documento, mas ele fica com a posição fixa e te acompanha se vc descer a 
+página. dá pra criar headers e footers com essa propriedade:
+.item-1 {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0;
+  width: 100%;
+  z-index: 1;
+} -> cria um footer
+
+5 - sticky:
+parecido com o fixed, mas vc tem q definir algum top ou bottom pro elemento começar a se mexer quando ele chega em 
+determinado ponto da página:
+.item-5 {
+  position: sticky;
+  top: 50px;
+}
