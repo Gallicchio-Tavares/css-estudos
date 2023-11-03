@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estados</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        select{
+            width: 158px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function carrega() {
+            var i;
+            const estados = [
+                "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO"
+            ];
+            var lista = document.getElementById("estados");
+
+            for (i = 0; i < estados.length; i++) {
+                var opcao = document.createElement("option");
+                opcao.text = estados[i];
+                opcao.value = estados[i];
+                lista.add(opcao);
+            }
+        }
+
+        function visualizar() {
+            var lista = document.getElementById("estados");
+            var indiceSelecionado = lista.selectedIndex;
+            var estadoSelecionado = lista.options[indiceSelecionado].text;
+            var sigla = estadoSelecionado;
+
+            switch (estadoSelecionado) {
+                case "AC":
+                    estadoSelecionado = "Acre";
+                    break;
+                case "AL":
+                    estadoSelecionado = "Alagoas";
+                    break;
+                case "AM":
+                    estadoSelecionado = "Amazonas";
+                    break;
+                case "AP":
+                    estadoSelecionado = "Amapá";
+                    break;
+                case "BA":
+                    estadoSelecionado = "Bahia";
+                    break;
+                case "CE":
+                    estadoSelecionado = "Ceará";
+                    break;
+                case "DF":
+                    estadoSelecionado = "Distrito Federal";
+                    break;
+                case "ES":
+                    estadoSelecionado = "Espírito Santo";
+                    break;
+                case "GO":
+                    estadoSelecionado = "Goiânia";
+                    break;
+                case "MA":
+                    estadoSelecionado = "Maranhão";
+                    break;
+                case "MT":
+                    estadoSelecionado = "Mato Grosso";
+                    break;
+                case "MS":
+                    estadoSelecionado = "Mato Grosso do Sul";
+                    break;
+                case "MG":
+                    estadoSelecionado = "Minas Gerais";
+                    break;
+                case "PA":
+                    estadoSelecionado = "Pará";
+                    break;
+                case "PB":
+                    estadoSelecionado = "Paraíba";
+                    break;
+                case "PE":
+                    estadoSelecionado = "Pernambuco";
+                    break;
+                case "PI":
+                    estadoSelecionado = "Piauí";
+                    break;
+                case "PR":
+                    estadoSelecionado = "Paraná";
+                    break;
+                case "RJ":
+                    estadoSelecionado = "Rio de Janeiro";
+                    break;
+                case "RN":
+                    estadoSelecionado = "Rio Grande do Norte";
+                    break;
+                case "RO":
+                    estadoSelecionado = "Rondônia";
+                    break;
+                case "RR":
+                    estadoSelecionado = "Roraima";
+                    break;
+                case "RS":
+                    estadoSelecionado = "Rio Grande do Sul";
+                    break;
+                case "SC":
+                    estadoSelecionado = "Santa Catarina";
+                    break;
+                case "SE":
+                    estadoSelecionado = "Sergipe";
+                    break;
+                case "SP":
+                    estadoSelecionado = "São Paulo";
+                    break;
+                case "TO":
+                    estadoSelecionado = "Tocantins";
+                    break;
+            }
+
+            document.getElementById("resp").value = sigla + " - " + estadoSelecionado;
+        }
+    </script>
+</head>
+<body onload="carrega()">
+    <table>
+        <tr>
+            <td>Selecione o estado:</td>
+            <td>
+                <select name="estados" id="estados" size="2" onchange="visualizar()"></select>
+            </td>
+        </tr>
+        <tr>
+            <td>O estado escolhido &eacute</td>
+            <td><input type="text" name="item" id="resp" readonly></td>
+        </tr>
+    </table>
+</body>
+</html>
